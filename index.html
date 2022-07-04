@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="left">
@@ -20,37 +22,44 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi est eaque. Sapiente numquam veritatis provident mollitia, consequatur cupiditate nemo enim? Vitae magni consequatur vel.
         </div>
         <div class="form-container">
-            <form action="">
+            <div class="password-validator">
+                <p id="eight">8+ characters</p>
+                <p id="lowercase">Lowercase letter</p>
+                <p id="uppercase">Uppercase letter</p>
+                <p id="number">Number</p>
+                <p id="special">Special character</p>
+                <p id="matches">Passwords match</p>
+            </div>
+            <form action="#">
                 <section>
-                    <label for="">First name</label>
-                    <input type="text">
+                    <label for="first_name">First name</label>
+                    <input placeholder=" " name="first_name" type="text">
                 </section>
                 <section>
-                    <label for="">Last name</label>
-                    <input type="text">
+                    <label for="last_name">Last name</label>
+                    <input placeholder=" " name="last_name" type="text">
                 </section>
                 <section>
-                    <label for="">Email</label>
-                    <input type="text">
+                    <label for="email">Email</label>
+                    <input placeholder=" " name="email" type="text">
                 </section>
                 <section>
-                    <label for="">Phone</label>
-                    <input type="text">
+                    <label for="phone">Phone</label>
+                    <input placeholder=" " name="phone"type="text" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
                 </section>
                 <section>
-                    <label for="">Password</label>
-                    <input type="text" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-            
+                    <label for="password">Password</label>
+                    <input placeholder=" " id="password" name="password" type="text" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
                 </section>
                 <section>
-                    <label for="">Confirm password</label>
-                    <input type="text">
+                    <label for="confirm-password">Confirm password</label>
+                    <input placeholder=" " id="confirm-password" name="confirm-password" type="text" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})">
                 </section>
             </form>
         </div>
+
         <div class="foot">
             <button type="submit">Create account</button>
-
            <p>Already have an account? <a href=""> Log in</a></p> 
         </div>
     </div>
