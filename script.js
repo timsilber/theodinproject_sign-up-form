@@ -3,7 +3,7 @@ const confirmPasswordInput = document.querySelector("#confirm-password")
 const passwordValidator = document.querySelector(".password-validator")
 
 
-document.querySelector("form").addEventListener("click", ()=>{
+document.addEventListener("click", ()=>{
     if (passwordInput === document.activeElement || confirmPasswordInput===document.activeElement){
         passwordValidator.classList.add("active")
     }else{passwordValidator.classList.remove("active")}
